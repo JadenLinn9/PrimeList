@@ -1,0 +1,31 @@
+<input type="button" id="find" onclick="find()" value="FIND!!">
+
+<table border="1" width="100%">
+    
+        <script>
+            for (let j=0;j<10;j++){
+                document.write("<tr>");              
+                    for(let i = 1;i<10;i++){
+                    let c = j *10 + i;
+                    //判斷是否為質數
+                        let isPrime;
+                        if (c == 1){
+                            isPrime = false;
+                        }else if (c == 2 || c ==3 || c == 5 || c == 7){
+                            isPrime = true;
+
+                        }else if (c % 2 != 0 && c % 3 != 0 && c % 5 != 0 && c % 7 !=0) {
+                            isPrime = true;
+                        }
+                        document.write("<td bgcolor='" + (isPrime?"pink":"white") + "'>");
+
+                        
+                        document.write(`${c}`);
+                        document.write("</td>");
+            }
+                document.write("</tr>");
+            }
+        
+        </script>
+
+</table>
